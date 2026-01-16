@@ -1578,6 +1578,19 @@
                                 <span class="flex-1 ms-3 whitespace-nowrap">Account</span>
                             </a>
                         </li>
+                        <li>
+                            <form action="/logout" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                
+                                <button type="submit">logout</button>
+                            </form>
+                            <a href="#"
+                                class="flex items-center p-2 text-neutral-900  hover:bg-neutral-100  group">
+                                <i class="ph ph-user-gear text-2xl"></i>
+                                <span class="flex-1 ms-3 whitespace-nowrap">Account</span>
+                            </a>
+                        </li>
                     </ul>
 
                     <div class="absolute bottom-4 left-4 right-4 flex gap-2 items-center">
