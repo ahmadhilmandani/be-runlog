@@ -7,6 +7,10 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    {{-- tinymce --}}
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
+    <script src="https://cdn.tiny.cloud/1/jx4mmd4wa4uqhha0q205mzfobe02wh1huc3a7zktif7v7jgw/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
+
     {{-- icon --}}
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
@@ -1547,7 +1551,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="{{ route('logs.index') }}"
                                 class="flex items-center p-2 text-neutral-900  hover:bg-neutral-100  group">
                                 <i class="ph ph-notebook text-2xl"></i>
                                 <span class="flex-1 ms-3 whitespace-nowrap">Logs</span>
@@ -1556,7 +1560,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="{{ route('tags.index') }}"
                                 class="flex items-center p-2 text-neutral-900  hover:bg-neutral-100  group">
                                 <i class="ph ph-tag text-2xl"></i>
                                 <span class="flex-1 ms-3 whitespace-nowrap">Tags</span>

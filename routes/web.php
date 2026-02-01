@@ -13,28 +13,34 @@ Route::delete('/logout', [LogController::class, 'destroy']);
 
 // ======== END AUTH =========
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard.index');
     })->name('dashboard');
 
+    // logs
     Route::get('/logs', function () {
         return view('logs.index');
-    });
+    })->name('logs.index');
+    Route::get('/logs/add', function () {
+        return view('logs.add');
+    })->name('logs.add');
 
     Route::get('/tags', function () {
         return view('auth.login');
-    })->name('login');
+    })->name('tags.index');
 
     Route::get('/learning-path', function () {
         return view('auth.login');
-    });
+    })->name('learning-path.index');
 
-    Route::get('/account', function () {
-        return view('auth.register');
-    });
+    // Route::get('/account', function () {
+    //     return view('auth.register');
+    // })->name('account.index');
+});
+
+
+
+Route::get('/', function () {
+    return view('welcome');
 });

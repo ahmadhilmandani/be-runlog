@@ -13,6 +13,17 @@
     --color-tahiti: #3ab7bf;
     --color-bermuda: #78dcca;
 }
+div .tox-tinymce{
+    @apply rounded-none border border-neutral-200 
+}
+
+div .tox-tinymce iframe {
+    @apply bg-neutral-50 
+}
+
+div .tox:not(.tox-tinymce-inline) .tox-editor-header {
+    @apply shadow-none border-b border-neutral-200 
+}
 
 @layer base {
     * {
